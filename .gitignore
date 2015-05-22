@@ -1,5 +1,6 @@
 # http://git-scm.com/docs/gitignore
 
+output
 node_modules
 *.log
 .tmp
