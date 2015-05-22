@@ -1,5 +1,7 @@
 # http://git-scm.com/docs/gitignore
 
+index.js
+object.js
 node_modules
 *.log
 .tmp
