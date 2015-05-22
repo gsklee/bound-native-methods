@@ -1,0 +1,6 @@
+# https://docs.npmjs.com/misc/developers
+
+*
+!.gitignore
+!LICENSE
+!index.js

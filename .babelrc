@@ -1,0 +1,8 @@
+{
+  "stage": 0,
+  "loose": "all",
+  "optional": [
+    "runtime",
+    "minification.inlineExpressions"
+  ]
+}

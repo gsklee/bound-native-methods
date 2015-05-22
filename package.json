@@ -1,0 +1,29 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "description": "",
+  "author": "G. Kay Lee <balancetraveller+github@gmail.com>",
+  "scripts": {
+    "setup": "npm cache clean && npm install",
+    "build": "gulp build",
+    "deploy": "./deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "babel-runtime": "^5.4.7",
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-babel": "^5.1.0"
+  },
+  "engines": {
+    "iojs": ">=2.0.0"
+  },
+  "license": "MIT"
+}
