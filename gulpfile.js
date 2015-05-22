@@ -6,5 +6,5 @@ const _ = GulpLoadPlugins();
 Gulp.task('build',
   () => Gulp.src('source/*.js')
             .pipe(_.babel())
-            .pipe(Gulp.dest('output/build'))
+            .pipe(Gulp.dest('.'))
 );

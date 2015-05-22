@@ -5,10 +5,9 @@
   "author": "G. Kay Lee <balancetraveller+github@gmail.com>",
   "scripts": {
     "setup": "npm cache clean && npm install",
-    "build": "rm -rf output && gulp build --gulpfile ./babel-register.js",
+    "build": "gulp build --gulpfile ./babel-register.js",
     "deploy": "./deploy"
   },
-  "main": "./output/build/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/gsklee/bound-native-methods"

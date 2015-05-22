@@ -3,4 +3,5 @@
 *
 !.gitignore
 !LICENSE
-!output/build/*
+!index.js
+!object.js
