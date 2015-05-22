@@ -5,7 +5,7 @@
   "author": "G. Kay Lee <balancetraveller+github@gmail.com>",
   "scripts": {
     "setup": "npm cache clean && npm install",
-    "build": "gulp build",
+    "build": "gulp build --gulpfile ./babel-register.js",
     "deploy": "./deploy"
   },
   "repository": {
