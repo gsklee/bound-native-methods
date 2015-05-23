@@ -1,11 +1,26 @@
-export const keys = function () {
-  return Object.keys(this);
-};
+export default [
+  'assign',
+  'create',
+  'defineProperties',
+  'defineProperty',
+  'freeze',
+  'getOwnPropertyDescriptor',
+  'getOwnPropertyNames',
+  'getOwnPropertySymbols',
+  'getPrototypeOf',
+  'is',
+  'isExtensible',
+  'isFrozen',
+  'isSealed',
+  'keys',
+  'observe',
+  'preventExtensions',
+  'seal',
+  'setPrototypeOf'
+].reduce((m, n) => {
+  m[n.endsWith('Of') ? n.slice(0, -2) : n] = function (...s) {
+    return Object[n](this, ...s);
+  };
 
-export const create = function (...s) {
-  return Object.create(this, ...s);
-};
-
-export const assign = function (...s) {
-  return Object.assign(this, ...s);
-};
+  return m;
+}, {});
