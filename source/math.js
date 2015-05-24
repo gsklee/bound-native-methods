@@ -27,7 +27,6 @@ export default functionGenerator(Math, [
   'max',
   'min',
   'pow',
-  'random',
   'round',
   'sign',
   'sin',
