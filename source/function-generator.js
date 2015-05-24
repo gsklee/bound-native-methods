@@ -1,4 +1,4 @@
-export default functionGenerator = (object, names, rename = {}) =>
+export default (object, names, rename = {}) =>
   names.reduce((m, name) => {
     m[rename[name] || name] = function (...s) {
       return this.constructor === Array ? object[name](...this, ...s) :
