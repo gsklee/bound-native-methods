@@ -10,3 +10,5 @@
 !/math.js
 !/date.js
 !/array.js
+!/array-buffer.js
+!/json.js
