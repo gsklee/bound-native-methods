@@ -70,6 +70,7 @@ Most static methods have been exported as is, but a few have been renamed or exc
 
 | Native Form | Bound Form |
 | ----------- | ---------- |
+| Math.pow()    | × |
 | Math.random() | × |
 
 #### Date
