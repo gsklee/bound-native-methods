@@ -1,11 +1,25 @@
-export const keys = function () {
-  return Object.keys(this);
-};
+import functionGenerator from './function-generator';
 
-export const create = function (...s) {
-  return Object.create(this, ...s);
-};
-
-export const assign = function (...s) {
-  return Object.assign(this, ...s);
-};
+export default functionGenerator(Object, [
+  'assign',
+  'create',
+  'defineProperties',
+  'defineProperty',
+  'freeze',
+  'getOwnPropertyDescriptor',
+  'getOwnPropertyNames',
+  'getOwnPropertySymbols',
+  'getPrototypeOf',
+  'is',
+  'isExtensible',
+  'isFrozen',
+  'isSealed',
+  'keys',
+  'observe',
+  'preventExtensions',
+  'seal',
+  'setPrototypeOf'
+], {
+  getPrototypeOf: 'getPrototype',
+  setPrototypeOf: 'setPrototype'
+});
