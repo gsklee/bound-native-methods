@@ -3,12 +3,7 @@
 *
 !.gitignore
 !LICENSE
-!/index.js
-!/object.js
-!/symbol.js
-!/number.js
-!/math.js
-!/date.js
-!/array.js
-!/array-buffer.js
-!/json.js
+
+!/*.js
+/babel-register.js
+/gulpfile.js
