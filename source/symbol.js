@@ -1,14 +1,9 @@
-export default [
+import functionGenerator from './function-generator';
+
+export default functionGenerator(Symbol, [
   'for',
   'keyFor'
-].reduce((m, n) => {
-  m[
-    n === 'for' ? 'symbol' :
-    n === 'keyFor' ? 'symbolKey' :
-    n
-  ] = function (...s) {
-    return Symbol[n](this, ...s);
-  };
-
-  return m;
-}, {});
+], {
+  for: 'symbol',
+  keyFor: 'symbolKey'
+});

@@ -1,4 +1,6 @@
-export default [
+import functionGenerator from './function-generator';
+
+export default functionGenerator(Object, [
   'assign',
   'create',
   'defineProperties',
@@ -17,10 +19,7 @@ export default [
   'preventExtensions',
   'seal',
   'setPrototypeOf'
-].reduce((m, n) => {
-  m[n.endsWith('Of') ? n.slice(0, -2) : n] = function (...s) {
-    return Object[n](this, ...s);
-  };
-
-  return m;
-}, {});
+], {
+  getPrototypeOf: 'getPrototype',
+  setPrototypeOf: 'setPrototype'
+});
