@@ -13,28 +13,23 @@ $ npm install bound-native-methods
 Usage
 -----
 
-### Import
-
 ```javascript
 import * from 'bound-native-methods';
 
 // Or, be more specific and cut down build size: //
 
-import {assign} from 'bound-native-methods/object';
+import {assign, keys} from 'bound-native-methods/object';
 ```
-
-###### Example
 
 ```javascript
 0::isInteger();
-
-// true //
+// true
 ```
 
 ```javascript
-[3, 6, 9]::max();
-
-// 9 //
+[3, 6, 9]::max()
+         ::is(9);
+// true
 ```
 
 ```javascript
@@ -42,9 +37,65 @@ import {assign} from 'bound-native-methods/object';
                     ::keys()
                     ::toJSON()
                     ::isArray();
-
-// false //
+// false
 ```
+
+API
+---
+
+Most static methods have been exported as is, but a few have been renamed or excluded to better fit the context:
+
+#### Object
+
+| Native Form | Bound Form |
+| ----------- | ---------- |
+| Object.getPrototypeOf() | ::getPrototype() |
+| Object.setPrototypeOf() | ::setPrototype() |
+
+#### Symbol
+
+| Native Form | Bound Form |
+| ----------- | ---------- |
+| Symbol.for()    | ::toSymbol() |
+| Symbol.keyFor() | ::key()      |
+
+#### Number
+
+| Native Form | Bound Form |
+| ----------- | ---------- |
+| Number.parseFloat() | ::toFloat() |
+| Number.parseInt()   | ::toInt()   |
+
+#### Math
+
+| Native Form | Bound Form |
+| ----------- | ---------- |
+| Math.pow()    | × |
+| Math.random() | × |
+
+#### Date
+
+| Native Form | Bound Form |
+| ----------- | ---------- |
+| Date.UTC()   | ×                |
+| Date.now()   | ×                |
+| Date.parse() | ::toUnixOffset() |
+
+#### Array
+
+| Native Form | Bound Form |
+| ----------- | ---------- |
+| Array.from() | × |
+| Array.of()   | × |
+
+#### ArrayBuffer
+
+#### JSON
+
+| Native Form | Bound Form |
+| ----------- | ---------- |
+| JSON.parse()     | ::toObject() |
+| JSON.stringify() | ::toJSON()   |
 
 License
 -------

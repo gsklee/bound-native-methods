@@ -26,7 +26,6 @@ export default functionGenerator(Math, [
   'log2',
   'max',
   'min',
-  'pow',
   'round',
   'sign',
   'sin',
