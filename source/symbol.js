@@ -4,6 +4,6 @@ export default functionGenerator(Symbol, [
   'for',
   'keyFor'
 ], {
-  for: 'symbol',
-  keyFor: 'symbolKey'
+  for: 'toSymbol',
+  keyFor: 'key'
 });

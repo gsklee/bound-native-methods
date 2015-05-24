@@ -7,4 +7,7 @@ export default functionGenerator(Number, [
   'isSafeInteger',
   'parseFloat',
   'parseInt'
-]);
+], {
+  parseFloat: 'toFloat',
+  parseInt: 'toInt'
+});
