@@ -6,6 +6,7 @@
 /number.js
 /math.js
 /date.js
+/array.js
 node_modules
 *.log
 .tmp
