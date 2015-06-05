@@ -1,7 +1,7 @@
 {
   "name": "bound-native-methods",
   "version": "0.1.5",
-  "description": "",
+  "description": "Bound native virtual methods to be used together with ES7 :: bind operator.",
   "author": "G. Kay Lee <balancetraveller+github@gmail.com>",
   "scripts": {
     "setup": "npm cache clean && npm install",
@@ -13,7 +13,16 @@
     "type": "git",
     "url": "https://github.com/gsklee/bound-native-methods"
   },
-  "keywords": [],
+  "keywords": [
+    "virtual method",
+    "method extraction",
+    "function bind",
+    "bind operator",
+    "bind",
+    "es6",
+    "es7",
+    "babel"
+  ],
   "dependencies": {},
   "devDependencies": {
     "babel": "^5.5.3",
