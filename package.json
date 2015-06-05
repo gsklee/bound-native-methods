@@ -1,6 +1,6 @@
 {
   "name": "bound-native-methods",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Bound native virtual methods to be used together with ES7 :: bind operator.",
   "author": "G. Kay Lee <balancetraveller+github@gmail.com>",
   "scripts": {
