@@ -6,7 +6,7 @@
   "scripts": {
     "setup": "npm cache clean && npm install",
     "update": "rm -rf node_modules && npm-check-updates -u && npm run setup",
-    "build": "gulp build --gulpfile ./babel-register.js",
+    "build": "gulp build",
     "deploy": "npm run build && ./deploy"
   },
   "repository": {
