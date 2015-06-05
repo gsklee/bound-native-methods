@@ -1,8 +1,7 @@
 # http://git-scm.com/docs/gitignore
 
 /*.js
-!/babel-register.js
-!/gulpfile.js
+!/gulpfile.babel.js
 
 node_modules
 *.log

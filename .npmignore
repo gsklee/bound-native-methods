@@ -5,5 +5,4 @@
 !LICENSE
 
 !/*.js
-/babel-register.js
-/gulpfile.js
+/gulpfile.babel.js

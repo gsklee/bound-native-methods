@@ -16,7 +16,7 @@ Usage
 ```javascript
 import * from 'bound-native-methods';
 
-// Or, be more specific and cut down build size: //
+// Or, be more specific and cut down the build size: //
 
 import {assign, keys} from 'bound-native-methods/object';
 ```
@@ -27,17 +27,16 @@ import {assign, keys} from 'bound-native-methods/object';
 ```
 
 ```javascript
-[3, 6, 9]::max()
-         ::is(9);
+[3, 6, 9]::max()::is(9);
 // true
 ```
 
 ```javascript
-{name: 'G. Kay Lee'}::assign({age: 18})
-                    ::keys()
-                    ::toJSON()
-                    ::isArray();
-// false
+{'2015-06-01T15:30:00.000Z': 300}::assign({'2015-07-01T15:30:00.000Z': 42})
+                                 ::keys()
+                                  .map(x => x::toUnixOffset())
+                                 ::toJSON();
+// [1433172600000,1435764600000]
 ```
 
 API
@@ -56,30 +55,30 @@ Most static methods have been exported as is, but a few have been renamed or exc
 
 | Native Form | Bound Form |
 | ----------- | ---------- |
-| Symbol.for()    | ::toSymbol() |
-| Symbol.keyFor() | ::key()      |
+| Symbol.for()    | ::toSymbol() <sup>[1]</sup> |
+| Symbol.keyFor() | ::key()                     |
 
 #### Number
 
 | Native Form | Bound Form |
 | ----------- | ---------- |
-| Number.parseFloat() | ::toFloat() |
-| Number.parseInt()   | ::toInt()   |
+| Number.parseFloat() | ::toFloat() <sup>[1]</sup> |
+| Number.parseInt()   | ::toInt() <sup>[1]</sup>   |
 
 #### Math
 
 | Native Form | Bound Form |
 | ----------- | ---------- |
-| Math.pow()    | × |
-| Math.random() | × |
+| Math.pow() <sup>[2]</sup> | × |
+| Math.random()             | × |
 
 #### Date
 
 | Native Form | Bound Form |
 | ----------- | ---------- |
-| Date.UTC()   | ×                |
-| Date.now()   | ×                |
-| Date.parse() | ::toUnixOffset() |
+| Date.UTC()   | ×                               |
+| Date.now()   | ×                               |
+| Date.parse() | ::toUnixOffset() <sup>[1]</sup> |
 
 #### Array
 
@@ -94,8 +93,12 @@ Most static methods have been exported as is, but a few have been renamed or exc
 
 | Native Form | Bound Form |
 | ----------- | ---------- |
-| JSON.parse()     | ::toObject() |
-| JSON.stringify() | ::toJSON()   |
+| JSON.parse()     | ::toObject() <sup>[1]</sup> |
+| JSON.stringify() | ::toJSON() <sup>[1]</sup>   |
+
+> ###### Notes:
+> 1. Bound methods whose names start with "to..." are to be applied to strings (with the exception of `::toJSON()` which can be applied to a variety of data types)
+> 2. Please use the exponentiation operator `**` instead
 
 License
 -------
