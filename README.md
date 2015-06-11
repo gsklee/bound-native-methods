@@ -87,10 +87,48 @@ Most static methods have been exported as is, but a few have been renamed or exc
 
 #### Math
 
-| Native Form | Bound Form |
+| Bound Form | Native Form |
 | ----------- | ---------- |
-| Math.pow() <sup>[2]</sup> | × |
-| Math.random()             | × |
+| ::abs() | Math.abs() |
+| ::acos() | Math.acos() |
+| ::acosh() | Math.acosh() |
+| ::asin() | Math.asin() |
+| ::asinh() | Math.asinh() |
+| ::atan() | Math.atan() |
+| ::atan2() | Math.atan2() |
+| ::atanh() | Math.atanh() |
+| ::cbrt() | Math.cbrt() |
+| ::ceil() | Math.ceil() |
+| ::clz32() | Math.clz32() |
+| ::cos() | Math.cos() |
+| ::cosh() | Math.cosh() |
+| ::exp() | Math.exp() |
+| ::expm1() | Math.expm1() |
+| ::floor() | Math.floor() |
+| ::fround() | Math.fround() |
+| ::hypot() | Math.hypot() |
+| ::imul() | Math.imul() |
+| ::log() | Math.log() |
+| ::log10() | Math.log10() |
+| ::log1p() | Math.log1p() |
+| ::log2() | Math.log2() |
+| ::max() | Math.max() |
+| ::min() | Math.min() |
+| ***×*** | ***Math.pow()*** <sup>[2]</sup> |
+| ***×*** | ***Math.random()*** |
+| ::round() | Math.round() |
+| ::sign() | Math.sign() |
+| ::sin() | Math.sin() |
+| ::sinh() | Math.sinh() |
+| ::sqrt() | Math.sqrt() |
+| ::tan() | Math.tan() |
+| ::tanh() | Math.tanh() |
+| ::trunc() | Math.trunc() |
+
+
+
+
+
 
 #### Date
 
