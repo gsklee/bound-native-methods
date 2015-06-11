@@ -56,7 +56,7 @@ Most static methods have been exported as is, but a few have been renamed or exc
 | ::getOwnPropertyDescriptor() | Object.getOwnPropertyDescriptor() |
 | ::getOwnPropertyNames()      | Object.getOwnPropertyNames()      |
 | ::getOwnPropertySymbols()    | Object.getOwnPropertySymbols()    |
-| ***::getPrototype()***       | Object.getPrototypeOf()           |
+| ***::getPrototype()***       | ***Object.getPrototypeOf()***     |
 | ::is()                       | Object.is()                       |
 | ::isExtensible()             | Object.isExtensible()             |
 | ::isFrozen()                 | Object.isFrozen()                 |
@@ -69,17 +69,21 @@ Most static methods have been exported as is, but a few have been renamed or exc
 
 #### Symbol
 
-| Native Form | Bound Form |
-| ----------- | ---------- |
-| Symbol.for()    | ::toSymbol() <sup>[1]</sup> |
-| Symbol.keyFor() | ::key()                     |
+| Bound Form | Native Form |
+| ---------- | ----------- |
+| ***::toSymbol()*** <sup>[1]</sup> | ***Symbol.for()***    |
+| ***::key()***                     | ***Symbol.keyFor()*** |
 
 #### Number
 
-| Native Form | Bound Form |
-| ----------- | ---------- |
-| Number.parseFloat() | ::toFloat() <sup>[1]</sup> |
-| Number.parseInt()   | ::toInt() <sup>[1]</sup>   |
+| Bound Form | Native Form |
+| ---------- | ----------- |
+| ::isFinite()                     | Number.isFinite()         |
+| ::isInteger()                    | Number.isInteger()        |
+| ::isNaN()                        | Number.isNaN()            |
+| ::isSafeInteger()                | Number.isSafeInteger()    |
+| ***::toFloat()*** <sup>[1]</sup> | ***Number.parseFloat()*** |
+| ***::toInt()*** <sup>[1]</sup>   | ***Number.parseInt()***   |
 
 #### Math
 
