@@ -46,10 +46,26 @@ Most static methods have been exported as is, but a few have been renamed or exc
 
 #### Object
 
-| Native Form | Bound Form |
-| ----------- | ---------- |
-| Object.getPrototypeOf() | ::getPrototype() |
-| Object.setPrototypeOf() | ::setPrototype() |
+| Bound Form | Native Form |
+| ---------- | ----------- |
+| ::assign()                   | Object.assign()                   |
+| ::create()                   | Object.create()                   |
+| ::defineProperties()         | Object.defineProperties()         |
+| ::defineProperty()           | Object.defineProperty()           |
+| ::freeze()                   | Object.freeze()                   |
+| ::getOwnPropertyDescriptor() | Object.getOwnPropertyDescriptor() |
+| ::getOwnPropertyNames()      | Object.getOwnPropertyNames()      |
+| ::getOwnPropertySymbols()    | Object.getOwnPropertySymbols()    |
+| ***::getPrototype()***       | Object.getPrototypeOf()           |
+| ::is()                       | Object.is()                       |
+| ::isExtensible()             | Object.isExtensible()             |
+| ::isFrozen()                 | Object.isFrozen()                 |
+| ::isSealed()                 | Object.isSealed()                 |
+| ::keys()                     | Object.keys()                     |
+| ::observe()                  | Object.observe()                  |
+| ::preventExtensions()        | Object.preventExtensions()        |
+| ::seal()                     | Object.seal()                     |
+| ***::setPrototype()***       | ***Object.setPrototypeOf()***     |
 
 #### Symbol
 
