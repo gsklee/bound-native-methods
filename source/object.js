@@ -15,7 +15,6 @@ export default functionGenerator(Object, [
   'isFrozen',
   'isSealed',
   'keys',
-  'observe',
   'preventExtensions',
   'seal',
   'setPrototypeOf'
